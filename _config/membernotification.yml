@@ -1,0 +1,9 @@
+Director:
+  rules:
+    '/membernotifications//$Action/$ID/$Name': 'MemberNotificationController'
+LeftAndMain:
+  extensions:
+    - MemberNotificationLeftMainExtension
+Member:
+  extensions:
+    ['MemberNotificationExtension']
