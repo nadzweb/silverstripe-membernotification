@@ -23,19 +23,22 @@
 .cms-content-header-info .section-comments-content .section-comments-comment p:nth-child(2){font-weight: bold; font-size: 11px;}
 .cms-content-header-info .section-comments-content .section-comments-comment p span { font-style: italic; vertical-align: bottom; font-weight: normal}
 
-.noti_bubble {
-    position:absolute;    /* This breaks the div from the normal HTML document. */
-    top: -6px;
-    right:-6px;
-    padding:1px 2px 1px 2px;
-    background-color:red; /* you could use a background image if you'd like as well */
-    color:white;
-    font-weight:bold;
-    font-size:0.55em;
+.cms-content-header-info .icon-comment-count {
+background-color: red;
+color: white;
+font-weight: bold;
+border-radius: 30px;
+position: absolute;
+width: 14px;
+height: 14px;
+margin-left: 10px;
+margin-top: -5px;
+font-size: 11px;
+}
 
-    /* The following is CSS3, but isn't crucial for this technique to work. */
-    /* Keep in mind that if a browser doesn't support CSS3, it's fine! They just won't have rounded borders and won't have a box shadow effect. */
-    /* You can always use a background image to produce the same effect if you want to, and you can use both together so browsers without CSS3 still have the rounded/shadow look. */
-    border-radius:30px;
-    box-shadow:1px 1px 1px gray;
+.cms-content-header-info .icon-comment-count span{
+display: block !important;
+margin-top: -5px;
+text-align: center;
+font-size: 9px;
 }
