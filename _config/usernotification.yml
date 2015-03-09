@@ -1,7 +1,0 @@
-
-Member:
-  extensions:
-    ['UserNotificationMemberExtension']
-Group:
-  extensions:
-    ['UserNotificationGroupExtension']
