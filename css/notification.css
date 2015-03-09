@@ -2,43 +2,11 @@
 .cms-content-header-info  .icon-comments {cursor:pointer}
 .cms-content-header-info .section-comments-wrap.hide{display:none;}
 .cms-content-header-info .section-comments-wrap{position:relative;}
-.cms-content-header-info .section-comments-content {
- background: none repeat scroll 0 0 #b0bec7;
-    border: 2px solid #d0d3d5;
-	background-image:linear-gradient(#b0bec7, #d4dbe0);
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: normal;
-    margin-left: -28px;
-    margin-top: 7px;
-    position: absolute;
-    width: 200px;
-	color: #444;
-    z-index: 300;
-	padding: 10px 15px;
-}
+.cms-content-header-info .section-comments-content { background: none repeat scroll 0 0 #b0bec7; border: 2px solid #d0d3d5; background-image:linear-gradient(#b0bec7, #d4dbe0); border-radius: 5px; font-size: 12px; font-weight: normal; margin-left: -28px; margin-top: 7px; position: absolute; width: 200px; color: #444; z-index: 300; padding: 10px 15px;}
 .cms-content-header-info .section-comments-content .section-comments-comment {border-bottom: 1px solid #9eafba; padding-top: 5px;}
 .cms-content-header-info .section-comments-content .section-comments-comment:last-child{border:none;}
 .cms-content-header-info .section-comments-content .section-comments-comment p {margin:0px; padding:0px; line-height: 14px;}
 .cms-content-header-info .section-comments-content .section-comments-comment p:nth-child(2){font-weight: bold; font-size: 11px;}
 .cms-content-header-info .section-comments-content .section-comments-comment p span { font-style: italic; vertical-align: bottom; font-weight: normal}
-
-.cms-content-header-info .icon-comment-count {
-background-color: red;
-color: white;
-font-weight: bold;
-border-radius: 30px;
-position: absolute;
-width: 14px;
-height: 14px;
-margin-left: 10px;
-margin-top: -5px;
-font-size: 11px;
-}
-
-.cms-content-header-info .icon-comment-count span{
-display: block !important;
-margin-top: -5px;
-text-align: center;
-font-size: 9px;
-}
+.cms-content-header-info .icon-comment-count { background-color: red; color: white; font-weight: bold; border-radius: 30px; position: absolute; width: 14px; height: 14px; margin-left: 10px; margin-top: -5px; font-size: 11px; }
+.cms-content-header-info .icon-comment-count span{ display: block !important; margin-top: -5px; text-align: center; font-size: 9px; }

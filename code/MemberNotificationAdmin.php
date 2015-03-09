@@ -1,6 +1,6 @@
 <?php
 
-class MemberNotificationModelAdmin extends ModelAdmin {
+class MemberNotificationAdmin extends ModelAdmin {
 
     private static $managed_models = array(
         'MemberNotification',

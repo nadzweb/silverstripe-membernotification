@@ -4,16 +4,22 @@
  * 
  * @package membernotification
  */
-class MemberNotification extends DataObject {
+class MemberNotification extends DataObject implements PermissionProvider {
 
 	private static $db = array(
 		'MemberNotificationTitle' => 'Varchar',
-		'MemberNotificationMessage' => 'Varchar(100)',
+		'MemberNotificationMessage' => 'Varchar(200)',
 		'CreatedByMemberID' => 'Int',
 	);
 	
 	private static $many_many = array(
 		'NotificationMembers' => 'Member'
+	);
+	
+	private static $many_many_extraFields = array(
+		'NotificationMembers' => array(
+			'ReadStatus' => 'Boolean'
+		)
 	);
 	
 	private static $summary_fields = array(
@@ -38,14 +44,14 @@ class MemberNotification extends DataObject {
 		$fields->removeByName('CreatedByMemberID');
 		
 		$fields->addFieldToTab('Root.Main', new TextField('MemberNotificationTitle', 'User notification title'));		
-		$fields->addFieldToTab('Root.Main', new TextareaField('MemberNotificationMessage', 'User notification message'));	
+		$fields->addFieldToTab('Root.Main', new TextareaField('MemberNotificationMessage', 'User notification message (200) characters only'));	
 		
 		// members - many_many relation
 		$membersMap = Member::get()
 			->sort('FirstName')
 			->map('ID', 'FirstName')
 			->toArray();
-		$membersField = new ListboxField('NotificationMembers', 'Select members');
+		$membersField = new ListboxField('NotificationMembers', 'Select users');
 		$membersField->setMultiple(true)->setSource($membersMap);
 		$fields->addFieldToTab('Root.Main', $membersField);
 		
@@ -57,18 +63,29 @@ class MemberNotification extends DataObject {
 		parent::onBeforeWrite();
 	}
 	
-	/** allow all users for crud operations **/
-	public function canView($member = null) {
-		return true;
+	function canView($member = false) {
+		return Permission::check('MEMBERNOTIFICATION_VIEW');
 	}
-	public function canEdit($member = null) {
-		return true;
+	
+	function canEdit($member = false) {
+		return Permission::check('MEMBERNOTIFICATION_EDIT');
 	}
-	public function canDelete($member = null) {
-		return true;
+	
+	function canDelete() {
+		return Permission::check('MEMBERNOTIFICATION_DELETE');
 	}
-	public function canCreate($member = null) {
-		return true;
+	
+	function canCreate() {
+		return Permission::check('MEMBERNOTIFICATION_CREATE');
+	}
+	
+	function providePermissions() {
+	   return array(
+		 'MEMBERNOTIFICATION_VIEW' => 'Read member notification object',
+		 'MEMBERNOTIFICATION_EDIT' => 'Edit member notification object',
+		 'MEMBERNOTIFICATION_DELETE' => 'Delete member notification object',
+		 'MEMBERNOTIFICATION_CREATE' => 'Create member notification object',
+	   );
 	}
 	
 }
