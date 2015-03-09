@@ -15,3 +15,5 @@ Setup and usage documentation: [docs/en/index.md](docs/en/index.md)
 ## Maintainers ##
 
  * Nadzweb.com <admin@nadzweb.com>
+ * Sample screenshots of notification page
+![Alt text](https://raw.githubusercontent.com/nadzweb/silverstripe-membernotification/master/docs/screengrab01.jpg "Member Notification")
