@@ -6,7 +6,7 @@ The membernotification module allows CMS Administrators to add short messages(no
 * Download the module from here https://github.com/nadzweb/silverstripe-membernotification/archive/master.zip
 * Extract the downloaded archive into your site root and rename the module to 'membernotification'.
 * Run dev/build?flush=all to regenerate the manifest
-* Optionally you can install it using [https://packagist.org/packages/nadzweb/membernotification](composer)
+* Optionally you can install it using [composer](https://packagist.org/packages/nadzweb/membernotification)
 
 ## Usage
 * An administrator can login to CMS and add notifications from "Member Notification" tab on left menu
