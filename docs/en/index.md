@@ -15,7 +15,5 @@ The membernotification module allows CMS Administrators to add short messages(no
 * A Content Author will receive the notification, the commment icon will show the unread notifications(red active icon) as seen in image screenshot below.
 * Clicking on the notification icon will disable the red icon unless a new notification is received.
 
-
 * Sample screenshots of notification page
-![Alt text](https://raw.github.com/nadzweb/silverstripe-membernotification/master/docs/screengrab01.png "Member Notification")
-
+![Alt text](https://raw.githubusercontent.com/nadzweb/silverstripe-membernotification/master/docs/screengrab01.jpg "Member Notification")
