@@ -1,6 +1,6 @@
 {
         "name": "nadzweb/membernotification",
-        "description": "User notification module for silverstripe",
+        "description": "Member notification module for silverstripe",
         "type": "silverstripe-module",
         "keywords": ["silverstripe", "member notification", "user notification"],
         "license": "BSD-3-Clause",
